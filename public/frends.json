@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Aminul Hasan",
+    "picture": "https://randomuser.me/api/portraits/men/11.jpg",
+    "email": "aminul.hasan@example.com",
+    "days_since_contact": 18,
+    "status": "almost due",
+    "tags": ["school friend", "close friend"],
+    "bio": "High school best friend. We still talk about old cricket matches and childhood memories.",
+    "goal": 14,
+    "next_due_date": "2026-04-20"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Ahmed",
+    "picture": "https://randomuser.me/api/portraits/women/22.jpg",
+    "email": "sarah.ahmed@example.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["work colleague", "tech"],
+    "bio": "Worked together on a React project. Very talented frontend developer.",
+    "goal": 10,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 3,
+    "name": "Rahim Uddin",
+    "picture": "https://randomuser.me/api/portraits/men/35.jpg",
+    "email": "rahim.uddin@example.com",
+    "days_since_contact": 32,
+    "status": "overdue",
+    "tags": ["university", "roommate"],
+    "bio": "University roommate. We used to stay up late coding and watching football.",
+    "goal": 21,
+    "next_due_date": "2026-03-25"
+  },
+  {
+    "id": 4,
+    "name": "Nusrat Jahan",
+    "picture": "https://randomuser.me/api/portraits/women/45.jpg",
+    "email": "nusrat.jahan@example.com",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": ["college", "close friend"],
+    "bio": "Met during college. We bonded over design projects and late-night study sessions.",
+    "goal": 14,
+    "next_due_date": "2026-04-22"
+  },
+  {
+    "id": 5,
+    "name": "David Chen",
+    "picture": "https://randomuser.me/api/portraits/men/51.jpg",
+    "email": "david.chen@example.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["developer", "online friend"],
+    "bio": "Met on GitHub. We collaborate on open-source React components.",
+    "goal": 7,
+    "next_due_date": "2026-04-15"
+  },
+  {
+    "id": 6,
+    "name": "Mehedi Hasan",
+    "picture": "https://randomuser.me/api/portraits/men/60.jpg",
+    "email": "mehedi.hasan@example.com",
+    "days_since_contact": 27,
+    "status": "overdue",
+    "tags": ["childhood friend", "neighbor"],
+    "bio": "Grew up in the same neighborhood. Played football every evening together.",
+    "goal": 30,
+    "next_due_date": "2026-03-30"
+  },
+  {
+    "id": 7,
+    "name": "Emily Johnson",
+    "picture": "https://randomuser.me/api/portraits/women/65.jpg",
+    "email": "emily.johnson@example.com",
+    "days_since_contact": 9,
+    "status": "on-track",
+    "tags": ["travel friend", "international"],
+    "bio": "Met during a trip to Malaysia. We still share travel stories and plans.",
+    "goal": 14,
+    "next_due_date": "2026-04-25"
+  },
+  {
+    "id": 8,
+    "name": "Tanvir Islam",
+    "picture": "https://randomuser.me/api/portraits/men/72.jpg",
+    "email": "tanvir.islam@example.com",
+    "days_since_contact": 14,
+    "status": "almost due",
+    "tags": ["freelancer", "tech buddy"],
+    "bio": "Freelance developer friend. We often discuss new JavaScript frameworks.",
+    "goal": 14,
+    "next_due_date": "2026-04-19"
+  }
+]

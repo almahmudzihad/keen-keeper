@@ -1,9 +1,14 @@
 import React from 'react'
+import Navbar from '../Share/Navbar'
+import { Outlet } from 'react-router'
+import Footer from '../Share/Footer'
 
 function Layout() {
     return (
         <div>
-            <h1>Layout</h1>
+            <Navbar />
+                <Outlet />
+            <Footer />
         </div>
     )
 }

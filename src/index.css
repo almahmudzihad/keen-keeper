@@ -1,1 +1,7 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
+.active{
+  @apply bg-gray-200;
+  @apply text-gray-900;
+}
