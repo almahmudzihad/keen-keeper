@@ -5,7 +5,7 @@ import "../../index.css";
 function Navbar() {
   return (
     <div className="bg-base-100 shadow-sm">
-      <div className="navbar container mx-auto">
+      <div className="navbar container mx-auto px-4">
         
         
         <div className="flex-1">

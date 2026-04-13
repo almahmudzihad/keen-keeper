@@ -2,8 +2,8 @@ import React from "react";
 
 function Footer() {
   return (
-    <div>
-      <footer className="footer footer-horizontal footer-center bg-teal-900 text-white p-10">
+    <div className="bg-teal-900">
+      <footer className="footer footer-horizontal footer-center  text-white p-10 container mx-auto">
         <aside>
           <h1 className="text-5xl font-semibold">
             <span className="font-bold">Keen</span>Keeper
