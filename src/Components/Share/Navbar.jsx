@@ -32,10 +32,11 @@ function Navbar() {
                 <NavLink to="/"> <RiHome2Line />Home</NavLink>
               </li>
               <li>
-                <NavLink to="/status"><FaChartLine />Status</NavLink>
+                <NavLink to="/timeline"><MdAccessTime />Timeline</NavLink>
+                
               </li>
               <li>
-                <NavLink to="/timeline"><MdAccessTime />Timeline</NavLink>
+                <NavLink to="/status"><FaChartLine />Status</NavLink>
               </li>
             </ul>
           </div>
@@ -48,10 +49,12 @@ function Navbar() {
               <NavLink to="/"><RiHome2Line />Home</NavLink>
             </li>
             <li>
-              <NavLink to="/status"><FaChartLine />Status</NavLink>
+              <NavLink to="/timeline"><MdAccessTime />Timeline</NavLink>
+
             </li>
             <li>
-              <NavLink to="/timeline"><MdAccessTime />Timeline</NavLink>
+              <NavLink to="/status"><FaChartLine />Status</NavLink>
+
             </li>
           </ul>
         </div>

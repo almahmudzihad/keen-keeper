@@ -24,7 +24,8 @@ function Frends() {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4">
           {frends.map((frend) => (
-            <Link to={`frendsdetels/${frend.id}`}
+            <Link
+              to={`frendsdetels/${frend.id}`}
               key={frend.id}
               className="bg-white shadow-md rounded-xl "
             >
@@ -39,9 +40,14 @@ function Frends() {
                 <div className="card-body items-center text-center">
                   <h2 className="text-lg font-bold">{frend.name}</h2>
                   <p>{frend.days_since_contact}d ago</p>
-                    <p className="btn rounded-full bg-blue-200 ">{frend.tags[0]}</p>
-                    <p className={frend.status==='on-track'?"btn rounded-full bg-green-200":"btn rounded-full bg-red-200"}>{frend.status}</p>
-                  
+                  <p className="btn rounded-full bg-blue-200 ">
+                    {frend.tags[0]}
+                  </p>
+                  <p
+                    className={`btn rounded-full ${frend.status === "on-track" ? "bg-green-200" : ""} ${frend.status === "overdue" ? "bg-red-200" : ""} ${frend.status === "almost due" ? "bg-red-50" : ""}`}
+                  >
+                    {frend.status}
+                  </p>
                 </div>
               </div>
             </Link>
