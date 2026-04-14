@@ -1,4 +1,5 @@
 import React, { use, useEffect, useState } from "react";
+import { RotatingLines } from "react-loader-spinner";
 import { Link } from "react-router";
 
 function Frends() {
@@ -20,7 +21,7 @@ function Frends() {
         Your Frends
       </h1>
       {loading ? (
-        <p>Loading...</p>
+        <div className='flex justify-center items-center h-[50vh]'><RotatingLines /></div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4">
           {frends.map((frend) => (

@@ -1,10 +1,9 @@
 import React from 'react'
+import { Oval, RotatingLines } from 'react-loader-spinner'
 
 function Status() {
     return (
-        <div>
-            <h1>Status page</h1>
-        </div>
+        <div className='flex justify-center items-center h-screen'><RotatingLines /></div>
     )
 }
 
