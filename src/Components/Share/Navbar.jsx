@@ -1,6 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router";
 import "../../index.css";
+import { RiHome2Line } from "react-icons/ri";
+import { MdAccessTime } from "react-icons/md";
+import { FaChartLine } from "react-icons/fa6";
 
 function Navbar() {
   return (
@@ -26,13 +29,13 @@ function Navbar() {
               className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/"> <RiHome2Line />Home</NavLink>
               </li>
               <li>
-                <NavLink to="/status">Status</NavLink>
+                <NavLink to="/status"><FaChartLine />Status</NavLink>
               </li>
               <li>
-                <NavLink to="/timeline">Timeline</NavLink>
+                <NavLink to="/timeline"><MdAccessTime />Timeline</NavLink>
               </li>
             </ul>
           </div>
@@ -42,13 +45,13 @@ function Navbar() {
         <div className="hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-2">
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/"><RiHome2Line />Home</NavLink>
             </li>
             <li>
-              <NavLink to="/status">Status</NavLink>
+              <NavLink to="/status"><FaChartLine />Status</NavLink>
             </li>
             <li>
-              <NavLink to="/timeline">Timeline</NavLink>
+              <NavLink to="/timeline"><MdAccessTime />Timeline</NavLink>
             </li>
           </ul>
         </div>
