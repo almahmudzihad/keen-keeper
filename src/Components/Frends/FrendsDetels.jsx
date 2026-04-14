@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from "react";
+import React, { use, useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineTextsms } from "react-icons/md";
@@ -8,23 +8,39 @@ import { FiArchive } from "react-icons/fi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaHistory } from "react-icons/fa";
 import { toast } from "react-toastify";
+import { HistoryContext } from "../../Context/HistoryContextCreate";
 
 const frendsPromis = fetch("/frends.json").then((res) => res.json());
 function FrendsDetels() {
+    const {history, setHistory} = useContext(HistoryContext);
   const { id } = useParams();
   const frends = use(frendsPromis);
   const frend = frends.find((frends) => frends.id == id);
+
+    const addHistory = (type) => {
+        const newEntry = {
+            name: frend.name,
+            action: type,
+            time: new Date().toLocaleString(),
+        };
+        setHistory([...history, newEntry]);
+    }
+
+
   const handelClickCall = () => {
+    addHistory("Call");
     toast.info(`Calling ${frend.name}`, {
       position: "top-center",
     });
   };
   const handelClickText = () => {
+    addHistory("Text");
     toast.success(`Send text to ${frend.name}`, {
       position: "top-center",
     });
   };
   const handelClickVideo = () => {
+    addHistory("Video");
     toast.error(`Video Call to ${frend.name}`, {
       position: "top-center",
     });

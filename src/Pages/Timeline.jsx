@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import { HistoryContext } from "../Context/HistoryContextCreate";
 
 function Timeline() {
+    const {history} = useContext(HistoryContext);
+    
   return (
     <div className="bg-base-200">
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -32,50 +35,19 @@ function Timeline() {
         </div>
         {/* Timeline body */}
         <div className="my-4">
-            <div className="bg-white flex gap-4 items-center rounded shadow py-2 mb-3">
-                <img src="" alt="" 
-                className="w-8 h-6 bg-red-400 m-2"/>
+            {history.length == 0 ? <h1 className="text-2xl font-bold text-cyan-800">No history</h1> :
+            history.map((history) => (<div className="bg-white flex gap-4 items-center rounded shadow py-2 mb-3">
+                <img src={`${history.action == "Call" ? "/call.png": ""} ${history.action == "Text" ? "/text.png": ""} ${history.action == "Video" ? "/video.png": ""}`} alt={history.action} 
+                className="w-6  sm:w-8 m-2"/>
                 <div>
                     <div className="flex gap-2 items-center">
-                        <h1 className="text-xl">Mitup</h1>
-                        <p>with Tom Barger</p>
+                        <h1 className="text-xl font-bold">{history.action}</h1>
+                        <p className="text-gray-500">with {history.name}</p>
                     </div>
-                    <p>Time 25 mar 26</p>
+                    <p className="text-gray-500">{history.time}</p>
                 </div>
-            </div>
-            <div className="bg-white flex gap-4 items-center rounded shadow py-2 mb-3">
-                <img src="" alt="" 
-                className="w-8 h-6 bg-red-400 m-2"/>
-                <div>
-                    <div className="flex gap-2 items-center">
-                        <h1 className="text-xl">Mitup</h1>
-                        <p>with Tom Barger</p>
-                    </div>
-                    <p>Time 25 mar 26</p>
-                </div>
-            </div>
-            <div className="bg-white flex gap-4 items-center rounded shadow py-2 mb-3">
-                <img src="" alt="" 
-                className="w-8 h-6 bg-red-400 m-2"/>
-                <div>
-                    <div className="flex gap-2 items-center">
-                        <h1 className="text-xl">Mitup</h1>
-                        <p>with Tom Barger</p>
-                    </div>
-                    <p>Time 25 mar 26</p>
-                </div>
-            </div>
-            <div className="bg-white flex gap-4 items-center rounded shadow py-2 mb-3">
-                <img src="" alt="" 
-                className="w-8 h-6 bg-red-400 m-2"/>
-                <div>
-                    <div className="flex gap-2 items-center">
-                        <h1 className="text-xl">Mitup</h1>
-                        <p>with Tom Barger</p>
-                    </div>
-                    <p>Time 25 mar 26</p>
-                </div>
-            </div>
+            </div> ))};
+            
             
         </div>
       </div>
