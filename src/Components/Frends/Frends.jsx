@@ -1,4 +1,5 @@
 import React, { use, useEffect, useState } from "react";
+import { Link } from "react-router";
 
 function Frends() {
   const [frends, setFrends] = useState([]);
@@ -23,7 +24,7 @@ function Frends() {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4">
           {frends.map((frend) => (
-            <div
+            <Link to={`frendsdetels/${frend.id}`}
               key={frend.id}
               className="bg-white shadow-md rounded-xl "
             >
@@ -43,7 +44,7 @@ function Frends() {
                   
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       )}

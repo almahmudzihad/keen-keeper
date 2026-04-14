@@ -4,6 +4,7 @@ import Layout from '../Components/Layout/Layout'
 import Home from '../Pages/Home'
 import Status from '../Pages/Status'
 import Timeline from '../Pages/Timeline'
+import FrendsDetels from '../Components/Frends/FrendsDetels'
 
 export const router = createBrowserRouter([
     {
@@ -13,6 +14,10 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home />
+            },
+            {
+                path:'frendsdetels/:id',
+                Component: FrendsDetels
             },
             {
                 path: '/status',
