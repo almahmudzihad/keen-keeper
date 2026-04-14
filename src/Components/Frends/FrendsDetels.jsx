@@ -187,7 +187,7 @@ function FrendsDetels() {
             </div>
 
             {/* Recent Interactions */}
-            <div className="bg-white p-4 rounded">
+            <div className="bg-white p-4 rounded hidden">
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
                 <h3 className="text-base sm:text-lg font-semibold">
                   Recent Interactions
