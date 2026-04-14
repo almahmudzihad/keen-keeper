@@ -7,24 +7,29 @@ import { RiNotificationSnoozeLine } from "react-icons/ri";
 import { FiArchive } from "react-icons/fi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaHistory } from "react-icons/fa";
+import { toast } from "react-toastify";
 
-
-const frendsPromis = fetch('/frends.json').then(res => res.json());
+const frendsPromis = fetch("/frends.json").then((res) => res.json());
 function FrendsDetels() {
   const { id } = useParams();
   const frends = use(frendsPromis);
-  const frend = frends.find(frends => frends.id == id);
+  const frend = frends.find((frends) => frends.id == id);
   const handelClickCall = () => {
-    alert('Call');
-  }
+    toast.info(`Calling ${frend.name}`, {
+      position: "top-center",
+    });
+  };
   const handelClickText = () => {
-    alert('Text');
-  }
+    toast.success(`Send text to ${frend.name}`, {
+      position: "top-center",
+    });
+  };
   const handelClickVideo = () => {
-    alert('Video');
-  }
+    toast.error(`Video Call to ${frend.name}`, {
+      position: "top-center",
+    });
+  };
 
-  
   return (
     <div className="bg-base-200">
       <div className=" container mx-auto px-4 py-8">
@@ -45,21 +50,22 @@ function FrendsDetels() {
                 </h2>
 
                 <p>
-                  <button className={`btn rounded-full ${frend.status === "on-track" ? "bg-green-200" : ""} ${frend.status === "overdue" ? "bg-red-200" : ""} ${frend.status === "almost due" ? "bg-red-50" : ""}`}>
+                  <button
+                    className={`btn rounded-full ${frend.status === "on-track" ? "bg-green-200" : ""} ${frend.status === "overdue" ? "bg-red-200" : ""} ${frend.status === "almost due" ? "bg-red-50" : ""}`}
+                  >
                     {frend.status}
                   </button>
                 </p>
 
                 <p>
-                    {frend.tags.map((tag, index) => (
-                      <button
-                        key={index}
-                        className="btn bg-green-100 rounded-full text-sm mr-1"
-                      >
-                        {tag}
-                      </button>
-                    ))}
-                  
+                  {frend.tags.map((tag, index) => (
+                    <button
+                      key={index}
+                      className="btn bg-green-100 rounded-full text-sm mr-1"
+                    >
+                      {tag}
+                    </button>
+                  ))}
                 </p>
 
                 <p className="text-sm sm:text-md text-gray-500">
@@ -73,12 +79,16 @@ function FrendsDetels() {
 
             {/* Actions */}
             <div className="text-center space-y-3 px-2">
-              <p className="py-2 bg-white rounded-md  flex items-center justify-center gap-2"><RiNotificationSnoozeLine /> Snooze 2 Weeks</p>
+              <p className="py-2 bg-white rounded-md  flex items-center justify-center gap-2">
+                <RiNotificationSnoozeLine /> Snooze 2 Weeks
+              </p>
               <p className="py-2 bg-white text-gray-700 rounded  flex items-center justify-center gap-2">
-                <FiArchive />Archive
+                <FiArchive />
+                Archive
               </p>
               <p className="py-2 bg-white text-red-700 rounded flex items-center justify-center gap-2">
-                <RiDeleteBin6Line />Delete
+                <RiDeleteBin6Line />
+                Delete
               </p>
             </div>
           </div>
@@ -88,7 +98,9 @@ function FrendsDetels() {
             {/* Stats */}
             <div className="grid grid-cols-1  lg:grid-cols-3 gap-4 text-center">
               <div className="bg-white p-4 rounded">
-                <p className="text-xl sm:text-2xl font-bold">{frend.days_since_contact}</p>
+                <p className="text-xl sm:text-2xl font-bold">
+                  {frend.days_since_contact}
+                </p>
                 <p className="text-sm text-gray-500">Days Since Contact</p>
               </div>
 
@@ -98,7 +110,9 @@ function FrendsDetels() {
               </div>
 
               <div className="bg-white p-4 rounded">
-                <p className="text-base sm:text-lg font-bold">{frend.next_due_date}</p>
+                <p className="text-base sm:text-lg font-bold">
+                  {frend.next_due_date}
+                </p>
                 <p className="text-sm text-gray-500">Next Due</p>
               </div>
             </div>
@@ -109,7 +123,9 @@ function FrendsDetels() {
                 <h3 className="text-base sm:text-lg font-semibold">
                   Relationship Goal
                 </h3>
-                <p className="text-sm text-gray-600">Connect every {frend.goal} days</p>
+                <p className="text-sm text-gray-600">
+                  Connect every {frend.goal} days
+                </p>
               </div>
 
               <button className="btn text-blue-600 hover:underline text-sm">
@@ -124,29 +140,33 @@ function FrendsDetels() {
               </h3>
 
               <div className=" mt-2 grid grid-cols-1  lg:grid-cols-3 gap-4 text-center py-5">
-                <div className="bg-base-200 hover:bg-green-200 p-4 rounded space-y-2"
-                onClick={handelClickCall}>
+                <div
+                  className="bg-base-200 hover:bg-green-200 p-4 rounded space-y-2"
+                  onClick={handelClickCall}
+                >
                   <p className="text-xl sm:text-2xl font-bold flex items-center justify-center">
                     <FiPhoneCall />
                   </p>
                   <p className="text-center font-bold">Call</p>
                 </div>
-                <div className="bg-base-200 hover:bg-green-200 p-4 rounded space-y-2"
-                onClick={handelClickText}>
+                <div
+                  className="bg-base-200 hover:bg-green-200 p-4 rounded space-y-2"
+                  onClick={handelClickText}
+                >
                   <p className="text-xl sm:text-2xl font-bold flex items-center justify-center">
                     <MdOutlineTextsms />
                   </p>
                   <p className="text-center font-bold">Text</p>
                 </div>
-                <div className="bg-base-200 hover:bg-green-200 p-4 rounded space-y-2"
-                onClick={handelClickVideo}
+                <div
+                  className="bg-base-200 hover:bg-green-200 p-4 rounded space-y-2"
+                  onClick={handelClickVideo}
                 >
                   <p className="text-xl sm:text-2xl font-bold flex items-center justify-center">
                     <CiVideoOn />
                   </p>
                   <p className="text-center font-bold">Video</p>
                 </div>
-                
               </div>
             </div>
 
@@ -158,7 +178,7 @@ function FrendsDetels() {
                 </h3>
 
                 <button className=" btn">
-                    <FaHistory />
+                  <FaHistory />
                   Full History
                 </button>
               </div>
