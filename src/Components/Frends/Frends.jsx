@@ -18,7 +18,7 @@ function Frends() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-xl  font-semibold text-cyan-800 leading-tight p-4">
-        Your Frends
+        Your Friends
       </h1>
       {loading ? (
         <div className='flex justify-center items-center h-[50vh]'><RotatingLines /></div>

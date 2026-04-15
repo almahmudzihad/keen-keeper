@@ -8,7 +8,7 @@ function Stat() {
   {/* Card 1 */}
   <div className="bg-white shadow-md rounded-xl flex items-center justify-center h-24 sm:h-28">
     <div className="text-center">
-      <h2 className="text-2xl sm:text-3xl font-bold text-cyan-700">12</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold text-cyan-700">8</h2>
       <p className="text-sm text-gray-500">Total Friend</p>
     </div>
   </div>
@@ -16,7 +16,7 @@ function Stat() {
   {/* Card 2 */}
   <div className="bg-white shadow-md rounded-xl flex items-center justify-center h-24 sm:h-28">
     <div className="text-center">
-      <h2 className="text-2xl sm:text-3xl font-bold text-cyan-700">8</h2>
+      <h2 className="text-2xl sm:text-3xl font-bold text-cyan-700">3</h2>
       <p className="text-sm text-gray-500">On Trakc</p>
     </div>
   </div>

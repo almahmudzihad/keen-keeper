@@ -45,7 +45,7 @@ function FrendsDetels() {
       position: "top-center",
     });
   };
-
+ 
   return (
     <div className="bg-base-200">
       <div className=" container mx-auto px-4 py-8">
@@ -182,43 +182,6 @@ function FrendsDetels() {
                     <CiVideoOn />
                   </p>
                   <p className="text-center font-bold">Video</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Recent Interactions */}
-            <div className="bg-white p-4 rounded hidden">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-                <h3 className="text-base sm:text-lg font-semibold">
-                  Recent Interactions
-                </h3>
-
-                <button className=" btn">
-                  <FaHistory />
-                  Full History
-                </button>
-              </div>
-
-              <div className="mt-2 space-y-2">
-                <div className="flex flex-col sm:flex-row justify-between border-b border-gray-300 py-3 gap-1">
-                  <div>
-                    <FiPhoneCall />
-                    <p>Text</p>
-                    <p className="text-sm text-gray-500">
-                      Asked for career advice
-                    </p>
-                  </div>
-                  <div className="text-sm text-gray-500">Jan 28, 2026</div>
-                </div>
-
-                <div className="flex flex-col sm:flex-row justify-between border-b border-gray-300 py-3 gap-1">
-                  <div>
-                    <p>Text</p>
-                    <p className="text-sm text-gray-500">
-                      Asked for career advice
-                    </p>
-                  </div>
-                  <div className="text-sm text-gray-500">Jan 28, 2026</div>
                 </div>
               </div>
             </div>
