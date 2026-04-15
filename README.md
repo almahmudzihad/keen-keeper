@@ -1,12 +1,33 @@
-# React + Vite
+# 📌 KeenKeeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Description
 
-Currently, two official plugins are available:
+KeenKeeper is a personal relationship management web app that helps users keep track of meaningful connections. It allows you to monitor communication frequency, set reminders, and ensure you stay connected with important people in your life.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React.js
+* Tailwind CSS
+* DaisyUI
+* React Router
+* JavaScript (ES6)
+
+---
+
+## ✨ Key Features
+
+1. **Friend Tracking System**
+   Easily manage and organize your friends with detailed profiles, including contact history and personal notes.
+
+2. **Status Monitoring**
+   Track relationship health with statuses like *overdue*, *almost due*, and *on-track* based on your communication goals.
+
+3. **Quick Check-In Actions**
+   Instantly connect with friends using quick actions like call, text, or video to maintain regular communication.
+
+---
+## Demo
+
+🚀 [Live Demo](https://keen-keeper-zihad.netlify.app/)

@@ -6,7 +6,7 @@ function Footer() {
       <footer className="footer footer-horizontal footer-center  text-white p-10 container mx-auto">
         <aside>
           <h1 className="text-5xl font-semibold">
-            <span className="font-bold">Keen</span>Keeper
+            <span className="font-extrabold">Keen</span>Keeper
           </h1>
 
           <p className="mt-2 max-w-xl px-2 sm:px-0">
